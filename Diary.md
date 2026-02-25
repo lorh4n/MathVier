@@ -97,3 +97,31 @@ Hoje implementei o **Quaternion**!
 ## 📅 04 de Maio de 2025
 
 Hoje implementei um **vetor genérico** no arquivo `VectorGeneric.hpp`, para uso em cálculos de **regressão linear**.
+
+---
+
+## 📅 25 de Fevereiro de 2026
+
+Faz tempo que não mexo aqui, mas hoje retomei o projeto com força total!
+
+### 🚀 **Novidades nas Matrizes e Integração**
+
+- **Multiplicação de Matrizes:** Finalmente implementei o `operator*` para `Mat4 * Mat4` e `Mat4 * Vec4`. Agora a biblioteca está ficando realmente útil para transformações complexas.
+- **Refatoração:** Limpei e formatei melhor o código em `matrix.hpp` e `vector.hpp`, garantindo que tudo siga o padrão de templates.
+- **Utilidades Matemáticas:** Comecei o arquivo `Math.hpp` para funções auxiliares, como o `almost_equal` para comparações de ponto flutuante (preciso revisar a implementação depois).
+- **Uso Prático:** Comecei a integrar a `MathVier` no meu outro projeto de geometria (`geom`). Usei o `Vec2` para implementar a função `closestPointOnSegment` em `primitives2d.cpp`. Está funcionando muito bem!
+
+### 🛠️ **O que foi feito hoje:**
+- [x] Operador `*` para `Mat4 * Mat4`
+- [x] Operador `*` para `Mat4 * Vec4`
+- [x] Criação do `Math.hpp` (em progresso)
+- [x] Refatoração de estilo e organização do código
+
+---
+
+## ✅ Tarefas Pendentes
+
+- [ ] Corrigir e testar a função `almost_equal` no `Math.hpp`.
+- [ ] Implementar `transpose` e `inverse` para matrizes.
+- [ ] Finalizar as transformações e multiplicação de Quaternions (que deixei parado ano passado).
+- [ ] Adicionar mais primitivas 2D no projeto `geom` usando a `MathVier`.

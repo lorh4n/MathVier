@@ -224,6 +224,7 @@ namespace MathVier
          return Vec4<Type>(x - other.x, y - other.y, z - other.z, w - other.w);
       };
 
+      // Operador de Multiplicação
       Vec4<Type> operator*(Type factor) const
       {
          return Vec4<Type>(x * factor, y * factor, z * factor, w * factor);
