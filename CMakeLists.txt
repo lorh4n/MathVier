@@ -9,10 +9,20 @@ add_library(MathVier STATIC
 )
 target_include_directories(MathVier PUBLIC include)
 
-# Testes (opcional, só compila se quiser)
 option(MATHVIER_BUILD_TESTS "Build tests" OFF)
+
 if(MATHVIER_BUILD_TESTS)
-    find_package(GTest REQUIRED)
+    add_subdirectory(external/catch2)
+
+    # mudar isso depois
     add_executable(mathvier_tests tests/test_vec.cpp)
-    target_link_libraries(mathvier_tests PRIVATE MathVier GTest::gtest_main)
+
+    target_link_libraries(mathvier_tests
+        PRIVATE
+            MathVier
+            Catch2::Catch2WithMain
+    )
+    include(CTest)
+    include(Catch)
+    catch_discover_tests(mathvier_tests)
 endif()

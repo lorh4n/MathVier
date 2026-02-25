@@ -110,18 +110,22 @@ Faz tempo que não mexo aqui, mas hoje retomei o projeto com força total!
 - **Refatoração:** Limpei e formatei melhor o código em `matrix.hpp` e `vector.hpp`, garantindo que tudo siga o padrão de templates.
 - **Utilidades Matemáticas:** Comecei o arquivo `Math.hpp` para funções auxiliares, como o `almost_equal` para comparações de ponto flutuante (preciso revisar a implementação depois).
 - **Uso Prático:** Comecei a integrar a `MathVier` no meu outro projeto de geometria (`geom`). Usei o `Vec2` para implementar a função `closestPointOnSegment` em `primitives2d.cpp`. Está funcionando muito bem!
+- **Infraestrutura de Testes:** Decidi levar os testes a sério. Adicionei o **Catch2** como submódulo e configurei o `CMakeLists.txt` para compilar os testes automaticamente. Já criei o primeiro teste para o `Vec2`.
 
 ### 🛠️ **O que foi feito hoje:**
 - [x] Operador `*` para `Mat4 * Mat4`
 - [x] Operador `*` para `Mat4 * Vec4`
 - [x] Criação do `Math.hpp` (em progresso)
 - [x] Refatoração de estilo e organização do código
+- [x] Configuração do **Catch2** para testes unitários
+- [x] Criação do primeiro teste em `tests/test_vec.cpp`
 
 ---
 
 ## ✅ Tarefas Pendentes
 
 - [ ] Corrigir e testar a função `almost_equal` no `Math.hpp`.
+- [ ] Expandir a cobertura de testes para matrizes e quaternions.
 - [ ] Implementar `transpose` e `inverse` para matrizes.
 - [ ] Finalizar as transformações e multiplicação de Quaternions (que deixei parado ano passado).
 - [ ] Adicionar mais primitivas 2D no projeto `geom` usando a `MathVier`.
